@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mWn8PAu1HOjez0+VSDE1QatLPUUiYi0JRgrxZ3YVrH5kK138ZKaCoEfipBn0rwhoQMeEGZ8Q2fUiYLC0sQofoQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Michi\\OneDrive\\Desktop\\PixelatedUtilities\\PixelatedUtilities\\Test\\Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Michi\\.nuget\\packages\\pixelatedutilities\\1.0.0\\pixelatedutilities.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
