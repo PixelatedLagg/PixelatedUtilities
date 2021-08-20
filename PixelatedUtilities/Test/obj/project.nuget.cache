@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mWn8PAu1HOjez0+VSDE1QatLPUUiYi0JRgrxZ3YVrH5kK138ZKaCoEfipBn0rwhoQMeEGZ8Q2fUiYLC0sQofoQ==",
+  "dgSpecHash": "XM4VrJGqMNajclI9ZDmmVJeBrsMzRCKByUt+I0UD92yYjV2dVR1db90Zmp9GHjDmpKmHRRVQyLn8zDeavi2wAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michi\\OneDrive\\Desktop\\PixelatedUtilities\\PixelatedUtilities\\Test\\Test.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Michi\\.nuget\\packages\\pixelatedutilities\\1.0.0\\pixelatedutilities.1.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\vfmus\\OneDrive\\Desktop\\VS19 Projects\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities\\Test\\Test.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

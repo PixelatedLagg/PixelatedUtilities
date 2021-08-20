@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TypeManipulation\PixelatedUtilities.csproj" />
+    <ProjectReference Include="..\PixelatedUtilities\PixelatedUtilities.csproj" />
   </ItemGroup>
 
 </Project>

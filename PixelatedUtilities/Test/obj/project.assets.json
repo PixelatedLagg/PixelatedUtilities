@@ -17,8 +17,8 @@
   "libraries": {
     "PixelatedUtilities/1.0.0": {
       "type": "project",
-      "path": "../TypeManipulation/PixelatedUtilities.csproj",
-      "msbuildProject": "../TypeManipulation/PixelatedUtilities.csproj"
+      "path": "../PixelatedUtilities/PixelatedUtilities.csproj",
+      "msbuildProject": "../PixelatedUtilities/PixelatedUtilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Michi\\.nuget\\packages\\": {}
+    "C:\\Users\\vfmus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michi\\OneDrive\\Desktop\\PixelatedUtilities\\PixelatedUtilities\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\vfmus\\OneDrive\\Desktop\\VS19 Projects\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\Michi\\OneDrive\\Desktop\\PixelatedUtilities\\PixelatedUtilities\\Test\\Test.csproj",
-      "packagesPath": "C:\\Users\\Michi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michi\\OneDrive\\Desktop\\PixelatedUtilities\\PixelatedUtilities\\Test\\obj\\",
+      "projectPath": "C:\\Users\\vfmus\\OneDrive\\Desktop\\VS19 Projects\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities\\Test\\Test.csproj",
+      "packagesPath": "C:\\Users\\vfmus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vfmus\\OneDrive\\Desktop\\VS19 Projects\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Michi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vfmus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -47,15 +47,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\Michi\\OneDrive\\Desktop\\NugetpackageTest": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/discord-net/api/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Michi\\OneDrive\\Desktop\\PixelatedUtilities\\PixelatedUtilities\\TypeManipulation\\PixelatedUtilities.csproj": {
-              "projectPath": "C:\\Users\\Michi\\OneDrive\\Desktop\\PixelatedUtilities\\PixelatedUtilities\\TypeManipulation\\PixelatedUtilities.csproj"
+            "C:\\Users\\vfmus\\OneDrive\\Desktop\\VS19 Projects\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities.csproj": {
+              "projectPath": "C:\\Users\\vfmus\\OneDrive\\Desktop\\VS19 Projects\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities\\PixelatedUtilities.csproj"
             }
           }
         }
@@ -84,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,13 +3,14 @@
   <metadata>
     <id>PixelatedUtilities</id>
     <version>1.0.0</version>
-    <authors>PixelatedUtilities</authors>
+    <authors>Pixelated_Lagg</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package Description</description>
     <dependencies>
       <group targetFramework="net5.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="C:\Users\Michi\OneDrive\Desktop\PixelatedUtilities\PixelatedUtilities\TypeManipulation\bin\Debug\net5.0\PixelatedUtilities.dll" target="lib\net5.0\PixelatedUtilities.dll" />
+    <file src="C:\Users\vfmus\OneDrive\Desktop\VS19 Projects\PixelatedUtilities\PixelatedUtilities\PixelatedUtilities\PixelatedUtilities\bin\Debug\net5.0\PixelatedUtilities.dll" target="lib\net5.0\PixelatedUtilities.dll" />
   </files>
 </package>
