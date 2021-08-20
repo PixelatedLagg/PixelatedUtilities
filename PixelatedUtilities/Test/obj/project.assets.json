@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "PixelatedUtilities/1.0.0": {
+      "PixelatedUtilities/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
@@ -15,7 +15,7 @@
     }
   },
   "libraries": {
-    "PixelatedUtilities/1.0.0": {
+    "PixelatedUtilities/0.1.0": {
       "type": "project",
       "path": "../PixelatedUtilities/PixelatedUtilities.csproj",
       "msbuildProject": "../PixelatedUtilities/PixelatedUtilities.csproj"
@@ -23,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "PixelatedUtilities >= 1.0.0"
+      "PixelatedUtilities >= 0.1.0"
     ]
   },
   "packageFolders": {

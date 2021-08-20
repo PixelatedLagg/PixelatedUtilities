@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>PixelatedUtilities</id>
-    <version>1.0.0</version>
+    <version>0.1.0</version>
     <authors>Pixelated_Lagg</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <icon>pixil-frame-0 (48).png</icon>
