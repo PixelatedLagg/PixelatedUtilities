@@ -1,6 +1,0 @@
-using PixelatedUtilities;
-
-namespace PixelatedUtilities
-{
-    
-}

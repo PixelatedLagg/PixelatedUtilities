@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Runtime.InteropServices;
 
-namespace PixelatedUtilities
+namespace PUtils
 {
     public static class Conversions
     {

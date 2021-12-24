@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PixelatedUtilities
+namespace PUtils
 {
     public static class Sort
     {
@@ -31,13 +31,21 @@ namespace PixelatedUtilities
             while (duplicate.Count != 0);
             return result.ToArray();
         }
-        public static int ValueAt(this int[] array, int i)
+        public static int ValueAt(this int[] array, SortMethods method, int i)
         {
             if (array.Count() < i || i < 0)
             {
                 return 0;
             }
-            return array[i];
+            switch (method)
+            {
+                case SortMethods.Highest:
+                    return Sort.ByHighest(array)[i];
+                case SortMethods.Lowest:
+                    return Sort.ByLowest(array)[i];
+                default:
+                    return 0;
+            }
         }
         public static double[] ByHighest(double[] array)
         {
@@ -63,13 +71,21 @@ namespace PixelatedUtilities
             while (duplicate.Count != 0);
             return result.ToArray();
         }
-        public static double ValueAt(this double[] array, int i)
+        public static double ValueAt(this double[] array, SortMethods method, int i)
         {
             if (array.Count() < i || i < 0)
             {
                 return 0;
             }
-            return array[i];
+            switch (method)
+            {
+                case SortMethods.Highest:
+                    return Sort.ByHighest(array)[i];
+                case SortMethods.Lowest:
+                    return Sort.ByLowest(array)[i];
+                default:
+                    return 0;
+            }
         }
         public static decimal[] ByHighest(decimal[] array)
         {
@@ -95,13 +111,21 @@ namespace PixelatedUtilities
             while (duplicate.Count != 0);
             return result.ToArray();
         }
-        public static decimal ValueAt(this decimal[] array, int i)
+        public static decimal ValueAt(this decimal[] array, SortMethods method, int i)
         {
             if (array.Count() < i || i < 0)
             {
                 return 0;
             }
-            return array[i];
+            switch (method)
+            {
+                case SortMethods.Highest:
+                    return Sort.ByHighest(array)[i];
+                case SortMethods.Lowest:
+                    return Sort.ByLowest(array)[i];
+                default:
+                    return 0;
+            }
         }
         public static List<int> ByHighest(List<int> array)
         {
@@ -124,6 +148,49 @@ namespace PixelatedUtilities
             }
             while (array.Count != 0);
             return result;
+        }
+        public static int ValueAt(this List<int> list, SortMethods method, int i)
+        {
+            if (list.Count() < i || i < 0)
+            {
+                return 0;
+            }
+            switch (method)
+            {
+                case SortMethods.Highest:
+                    return Sort.ByHighest(list)[i];
+                case SortMethods.Lowest:
+                    return Sort.ByLowest(list)[i];
+                default:
+                    return 0;
+            }
+        }
+        public static Dictionary<string, ulong> ByHighest(this Dictionary<string, ulong> dict)
+        {
+            Dictionary<string, ulong> result = new Dictionary<string, ulong>();
+            do
+            {
+                var pair = dict.Aggregate((l, r) => l.Value > r.Value ? l : r);
+                result.Add(pair.Key, pair.Value);
+                dict.Remove(pair.Key);
+            }
+            while (dict.Count != 0);
+            return result;
+        }
+    }
+    public enum SortMethods
+    {
+        Highest,
+        Lowest
+    }
+    public class test
+    {
+        public test this[int i]
+        {
+            get
+            {
+                return new test();
+            }
         }
     }
 }
