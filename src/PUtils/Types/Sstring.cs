@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace PUtils
 {
-    public struct sstring
+    public class sstring : Special
     {
         private int _length;
         private static string _val;
@@ -133,6 +134,17 @@ namespace PUtils
                 place++;
             }
             return result;
+        }
+        public IEnumerator<char> GetEnumerator()
+        {
+            foreach (char c in _val)
+            {
+                yield return c;
+            }
+        }
+        public object ToNative()
+        {
+            return _val;
         }
         public static implicit operator sstring(string val)
         {

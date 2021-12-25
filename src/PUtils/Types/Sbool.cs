@@ -3,7 +3,7 @@ using System.Text;
 
 namespace PUtils
 {
-    public struct sbool
+    public class sbool : Special
     {
         private static bool _val;
         public int Size
@@ -24,6 +24,10 @@ namespace PUtils
                 return 1;
             }
             return 0;
+        }
+        public object ToNative()
+        {
+            return _val;
         }
         public static implicit operator sbool(bool val)
         {
