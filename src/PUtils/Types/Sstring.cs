@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PUtils
 {
-    public class sstring : Special
+    public class sstring : SpecialObject
     {
         private int _length;
         private static string _val;
@@ -19,24 +19,14 @@ namespace PUtils
         {
             get
             {
-                return ASCIIEncoding.Unicode.GetByteCount(_val);
+                return _val.Length * 2;
             }
-        }
-        private int RefreshLength()
-        {
-            int length = 0;
-            foreach (char c in _val)
-            {
-                length++;
-            }
-            _length = length;
-            return length;
         }
         public int Length
         {
             get
             {
-                return RefreshLength();
+                return _length;
             }
         }
         public sstring(string val)
@@ -56,7 +46,16 @@ namespace PUtils
         }
         public sstring Concat(string val)
         {
-            _val += val;
+            StringBuilder builder = new StringBuilder(_val, val.Length);
+            builder.Append(val);
+            _val = builder.ToString();
+            return _val;
+        }
+        public static sstring operator +(sstring val)
+        {
+            StringBuilder builder = new StringBuilder(_val, val.Length);
+            builder.Append(val);
+            _val = builder.ToString();
             return _val;
         }
         public int ToInt()

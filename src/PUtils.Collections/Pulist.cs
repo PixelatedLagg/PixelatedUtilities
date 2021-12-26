@@ -4,12 +4,12 @@ using System;
 
 namespace PUtils.Collections
 {
-    public class pulist : IEnumerable<Special>, IList<Special>
+    public class pulist : IEnumerable<SpecialObject>, IList<SpecialObject>
     {
-        private static Special[] _val;
+        private static SpecialObject[] _val;
         private int _size;
         private bool _readonly;
-        private static readonly Special[] _emptyArray = new Special[0];
+        private static readonly SpecialObject[] _emptyArray = new SpecialObject[0];
         public int Count
         {
             get
@@ -24,7 +24,7 @@ namespace PUtils.Collections
                 return _readonly;
             }
         }
-        public Special this[int index]
+        public SpecialObject this[int index]
         { 
             get 
             {
@@ -41,15 +41,15 @@ namespace PUtils.Collections
             _size = 0;
             _readonly = false;
         }
-        public void Add(Special val)
+        public void Add(SpecialObject val)
         {
             if (_size == 0)
             {
                 _size++;
-                _val = new Special[1] {val};
+                _val = new SpecialObject[1] {val};
                 return;
             }
-            Special[] result = new Special[_size + 1];
+            SpecialObject[] result = new SpecialObject[_size + 1];
             for (int x = 0; x < _size; x++)
             {
                 result[x] = _val[x];
@@ -63,9 +63,9 @@ namespace PUtils.Collections
             _val = _emptyArray;
             _size = 0;
         }
-        public bool Contains(Special item)
+        public bool Contains(SpecialObject item)
         {
-            foreach (Special s in _val)
+            foreach (SpecialObject s in _val)
             {
                 if (s.ToNative() == item.ToNative())
                 {
@@ -74,9 +74,9 @@ namespace PUtils.Collections
             }
             return false;
         }
-        public void CopyTo(Special[] array, int arrayIndex)
+        public void CopyTo(SpecialObject[] array, int arrayIndex)
         {
-            Special[] result = new Special[array.Length + _val.Length];
+            SpecialObject[] result = new SpecialObject[array.Length + _val.Length];
             for (int x = 0; x < array.Length; x++)
             {
                 result[x] = array[x];
@@ -86,9 +86,9 @@ namespace PUtils.Collections
                 result[x + array.Length] = _val[x];
             }
         }
-        public IEnumerator<Special> GetEnumerator()
+        public IEnumerator<SpecialObject> GetEnumerator()
         {
-            foreach (Special s in _val)
+            foreach (SpecialObject s in _val)
             {
                 yield return s;
             }
@@ -97,7 +97,7 @@ namespace PUtils.Collections
         {
             return GetEnumerator();
         }
-        public int IndexOf(Special item)
+        public int IndexOf(SpecialObject item)
         {
             for (int x = 0; x < _val.Length; x++)
             {
@@ -108,11 +108,11 @@ namespace PUtils.Collections
             }
             return 0;
         }
-        public void Insert(int index, Special item)
+        public void Insert(int index, SpecialObject item)
         {
             _val[index] = item;
         }
-        public bool Remove(Special item)
+        public bool Remove(SpecialObject item)
         {
             int removed = 0;
             for (int x = 0; x < _size; x++)
@@ -139,7 +139,7 @@ namespace PUtils.Collections
         private void Reorder()
         {
             int index = 0;
-            Special[] result = new Special[_size];
+            SpecialObject[] result = new SpecialObject[_size];
             for (int x = 0; x < _val.Length; x++)
             {
                 if (_val[x] != null)

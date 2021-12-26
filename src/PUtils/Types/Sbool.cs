@@ -3,7 +3,7 @@ using System.Text;
 
 namespace PUtils
 {
-    public class sbool : Special
+    public class sbool : SpecialObject
     {
         private static bool _val;
         public int Size
