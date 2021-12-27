@@ -9,19 +9,19 @@ namespace PUtils
         }
         public static sint operator +(sint val)
         {
-            return _val + val;
+            return _val + val.ToInt();
         }
         public static sint operator -(sint val)
         {
-            return _val - val;
+            return _val - val.ToInt();
         }
         public static bool operator ==(sint val1, sint val2)
         {
-            return val1 == val2;
+            return val1.ToInt() == val2.ToInt();
         }
         public static bool operator !=(sint val1, sint val2)
         {
-            return val1 != val2;
+            return val1.ToInt() != val2.ToInt();
         }
         public object ToNative()
         {
@@ -35,12 +35,11 @@ namespace PUtils
         {
             return _val;
         }
-
         public override bool Equals(object obj)
         {
             if (obj as sint != null)
             {
-                if ((int)((sint)obj).ToNative() == _val)
+                if ((sint)obj == _val)
                 {
                     return true;
                 }
@@ -51,10 +50,17 @@ namespace PUtils
             }
             return false;
         }
-
         public override int GetHashCode()
         {
             return _val.GetHashCode();
+        }
+        public object ToObject()
+        {
+            return _val;
+        }
+        public int ToInt()
+        {
+            return _val;
         }
     }
 }

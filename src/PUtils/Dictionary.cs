@@ -6,21 +6,25 @@ using System.Collections.ObjectModel;
 
 namespace PUtils
 {
-    public static class Dict
+    public static class Dictionary
     {
         /// <summary>
         /// Returns key by value.
         /// </summary>
         /// <typeparam name="TKey"></typeparam>
         /// <typeparam name="TValue"></typeparam>
-        /// <param name="d"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static object KeyHasValue<TKey, TValue>(this Dictionary<TKey, TValue> d, object value)
+        public static TKey KeyHasValue<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TValue value)
         {
-            Dictionary<object, object> dict = new Dictionary<object, object>();
-            foreach (KeyValuePair<TKey, TValue> p in d) { dict.Add((object)p.Key, (object)p.Value); }
-            return dict.FirstOrDefault(x => x.Value == value).Key;
+            foreach (KeyValuePair<TKey, TValue> kvp in dictionary)
+            {
+                if ((object)kvp.Value == (object)value)
+                {
+                    return kvp.Key;
+                }
+            }
+            return default(TKey);
         }
         /// <summary>
         /// Returns a random pair from a dictionary.
@@ -29,10 +33,10 @@ namespace PUtils
         /// <typeparam name="TValue"></typeparam>
         /// <param name="dict"></param>
         /// <returns></returns>
-        public static KeyValuePair<TKey, TValue> RandomPair<TKey, TValue>(this Dictionary<TKey, TValue> dict)
+        public static KeyValuePair<TKey, TValue> RandomPair<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
         {
             Random rnd = new Random();
-            return dict.ElementAt(rnd.Next(0, dict.Count));
+            return dictionary.ElementAt(rnd.Next(0, dictionary.Count + 1));
         }
         /// <summary>
         /// Returns the sum of all values in a dictionary with numeric values.
@@ -41,18 +45,18 @@ namespace PUtils
         /// <typeparam name="TValue"></typeparam>
         /// <param name="dict"></param>
         /// <returns></returns>
-        public static object ValueSum<TKey, TValue>(this Dictionary<TKey, TValue> dict) where TValue : IConvertible
+        public static TValue ValueSum<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
         {
-            try
+            if (dictionary.Values.First() as double? != null)
             {
-                double i = 0;
-                foreach (KeyValuePair<TKey, TValue> p in dict) { i += Convert.ToDouble(p.Value); }
-                return i;
+                double result = 0;
+                foreach (KeyValuePair<TKey, TValue> kvp in dictionary)
+                {
+                    result += (double)(object)kvp.Value;
+                }
+                return (TValue)(object)result;
             }
-            catch (Exception ex)
-            {
-                throw new ArgumentException($"{ex.Source.GetType()} is an invalid type for this operation!");
-            }
+            return default(TValue);
         }
     }
 }

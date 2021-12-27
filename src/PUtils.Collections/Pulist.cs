@@ -67,7 +67,7 @@ namespace PUtils.Collections
         {
             foreach (SpecialObject s in _val)
             {
-                if (s.ToNative() == item.ToNative())
+                if (s.ToObject() == item.ToObject())
                 {
                     return true;
                 }

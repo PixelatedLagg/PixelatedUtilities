@@ -25,7 +25,7 @@ namespace PUtils
             }
             return 0;
         }
-        public object ToNative()
+        public object ToObject()
         {
             return _val;
         }

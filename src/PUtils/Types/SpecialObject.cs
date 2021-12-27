@@ -4,6 +4,8 @@ namespace PUtils
 {
     public interface SpecialObject
     {
-        public Object ToNative();
+        public Object ToObject();
+        public int ToInt();
+        public string ToString();
     }
 }

@@ -49,14 +49,19 @@ namespace PUtils
             StringBuilder builder = new StringBuilder(_val, val.Length);
             builder.Append(val);
             _val = builder.ToString();
-            return _val;
+            return new sstring(builder.ToString());
         }
-        public static sstring operator +(sstring val)
+        public static sstring operator +(sstring val1, sstring val2)
         {
-            StringBuilder builder = new StringBuilder(_val, val.Length);
-            builder.Append(val);
-            _val = builder.ToString();
-            return _val;
+            StringBuilder builder = new StringBuilder(val1, val2.Length + val1.Length);
+            builder.Append(val2);
+            return new sstring(builder.ToString());
+        }
+        public static sstring operator -(sstring val1, sstring val2)
+        {
+            StringBuilder builder = new StringBuilder(val1, val2.Length + val1.Length);
+            builder.Replace(val2, "");
+            return new sstring(builder.ToString());
         }
         public int ToInt()
         {
@@ -141,7 +146,7 @@ namespace PUtils
                 yield return c;
             }
         }
-        public object ToNative()
+        public object ToObject()
         {
             return _val;
         }
