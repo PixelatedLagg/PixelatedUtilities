@@ -1,4 +1,5 @@
 using System;
+
 namespace PUtils.Number
 {
     public class Rand
